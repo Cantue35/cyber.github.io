@@ -19,10 +19,14 @@
 </head>
     <title>Cyber - Discord Bot</title>
 <body>
+    <div id ="particles-js"></div>
+    <script src="particles.js"></script>
     <script>
-        <div id ="particles-js"></div>
-        <script src="particles.js"></script>
-        <script src="js/particles-js.js"></script>
+        // Hope it works
+        particlesJS.load('js/particles-js', 'config/particles.json', 
+        function(){
+            console.log('[CONFIG] Particles.json loaded')
+        })                  
     </script>
     <div class="navigation">
         <div class="navbar transparent">
