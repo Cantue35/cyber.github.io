@@ -21,7 +21,13 @@
 <body>
     <div id ="particles-js"></div>
     <script src="particles.js"></script>
-    <script src="js/particles-js.js"></script>
+    <script>
+        // Hope it works
+        particlesJS.load('js/particles-js', 'config/particles.json', 
+        function(){
+            console.log('[CONFIG] Particles.json loaded')
+        })                  
+    </script>
     <div class="navigation">
         <div class="navbar transparent">
             <a href="/cyber.github.io/"><img alt="Cyber" src="img/CYBER-RESIZED.png" width="240"></a>
