@@ -10,6 +10,14 @@ body {
     background-color: black !important;
 }
 
+.particles {
+    width:100%;
+    height:100%;
+      position: fixed;
+      z-index: -1;
+      opacity: 0.25;
+}
+
 .navbar.transparent.navbar-inverse .navbar-inner {
 	border-width: 0;
 	-webkit-box-shadow: 0 0;
@@ -269,13 +277,6 @@ padding-top: 12px;
     font-size: 1.125rem;
 }
 
-
-
-/* ---- particles.js container ---- */
-
-#particles canvas{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+#particles-js {
+  height: 100vh;
 }
