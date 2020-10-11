@@ -53,124 +53,49 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>-new (reason)</td>
-                    <td>Creates a new ticket.</td>
+                    <td>new (reason)</td>
+                    <td>Create a new support ticket channel.</td>
                 </tr>
-                <td>-close</td>
-                <td>Closes a ticket channel.</td>
+                <td>close</td>
+                <td>Close a support ticket channel.</td>
                 <tr>
-                    <td>-delete</td>
+                    <td>delete</td>
                     <td>Deletes a ticket channel.</td>
                 </tr>
-                <td>-forcedelete</td>
+                <td>forcedelete</td>
                 <td>Fast way to delete a ticket channel.</td>
                 <tr>
-                    <td>-lower</td>
+                    <td>lower</td>
                     <td>Lower a support ticket to the whole staff team.</td>
                 </tr>
-                <td>-raise</td>
-                <td>Raise a support ticket to select roles only</td>
+                <td>raise</td>
+                <td>Raise a support ticket to select roles only.</td>
                 <tr>
-                    <td>roleinfo (role)</td>
-                    <td>Display some info about the specified role</td>
+                    <td>remove (user)</td>
+                    <td>Remove a user from a support ticket.</td>
                 </tr>
-                <td>cls</td>
-                <td>Clears your console fully</td>
+                <td>add (user)</td>
+                <td>Add a user to a support ticket.</td>
                 <tr>
-                    <td>logout</td>
-                    <td>Logs you out the selfbot</td>
+                    <td>notice</td>
+                    <td>Display a please reply notice in a support ticket.</td>
                 </tr>
-                <td>dm (user) (message)</td>
-                <td>Sends a message to the specified user</td>
+                <td>ticketpanel</td>
+                <td>Create a panel for tickets. People can create a support ticket by reacting with 🎟️.</td>
                 <tr>
-                    <td>everyone</td>
-                    <td>Glitched way to mention everyone in a server</td>
+                    <td>reopen</td>
+                    <td>Reopen a closed ticket.</td>
                 </tr>
-                <td>empty</td>
-                <td>Sends a empty message</td>
+                <td>transcript</td>
+                <td>Get the transcript sent to the channel.</td>
                 <tr>
-                    <td>get-hwid</td>
-                    <td>Prints your hwid in the console</td>
+                    <td>voiceticket</td>
+                    <td>Open a voice ticket.</td>
                 </tr>
-                <td>secret (message)</td>
-                <td>Returns the message but hidden ||hidden||</td>
-                <tr>
-                    <td>bold (message)</td>
-                    <td>Returns the message but **bold**</td>
-                </tr>
-                <td>unflip</td>
-                <td>Sends: ┬─┬ ノ( ゜-゜ノ)</td>
-                <tr>
-                    <td>tableflip</td>
-                    <td>Sends: (╯°□°）╯︵ ┻━┻</td>
-                </tr>
-                <td>lenny</td>
-                <td>Sends: ( ͡° ͜ʖ ͡°)</td>
-                <tr>
-                    <td>shrug</td>
-                    <td>Sends: ¯\_(ツ)_/¯</td>
-                </tr>
-                <td>reverse (message)</td>
-                <td>Reverses ur message
-                    <tr>
-                        <td>ascii (message)</td>
-                        <td>Makes your message ascii/fancy</td>
-                    </tr>
-                    <td>read</td>
-                    <td>Marks all your messages as read, except DM</td>
-                    <tr>
-                        <td>group-leaver</td>
-                        <td>Leaves all the groups you're in</td>
-                    </tr>
-                    <td>purge (amount)</td>
-                    <td>Deletes your messages based on the amount you specify
-                        <td>
-                            <tr>
-                                <td>uptime</td>
-                                <td>Shows how long the selfbot has been online and working</td>
-                            </tr>
-                            <td>hastebin (message)</td>
-                            <td>Saves your text/code to hastebin</td>
-                            <tr>
-                                <td>first-message</td>
-                                <td>Get the first message in that channel</td>
-                            </tr>
-                            <td>abc</td>
-                            <td>Sends the whole abecedary in a single message</td>
-                            <tr>
-                                <td>devowel (message)</td>
-                                <td>Devowels your message</td>
-                            </tr>
-                            <td>1337-speak (message)</td>
-                            <td>Translates your message to 1337 language</td>
-                            <tr>
-                                <td>combine (name1) (name2)</td>
-                                <td>Combines the two names together</td>
-                            </tr>
-                            <td>pingweb (website)</td>
-                            <td>Pings a website in order to check if its working or not (ie: !pingweb https://google.com)</td>
-                            <tr>
-                                <td>spam (amount) (message)</td>
-                                <td>Sends the specified message that amount of times</td>
-                            </tr>
-                            <td>clear</td>
-                            <td>Spam the chat with invisible messages</td>
-                            <tr>
-                                <td>tts (message)</td>
-                                <td>Send that message in .wav format, like an audio</td>
-                            </tr>
-                            <td>upper (message)</td>
-                            <td>Make your message CAPS</td>
-                            <tr>
-                                <td>lmgtfy (message)</td>
-                                <td>Use lmgtfy search engine to look-up something</td>
-                            </tr>
-                            <td>genname</td>
-                            <td>Generate a random name based on the server members</td>
             </tbody>
         </table>
         <br>
-        <h3 class="light">NSFW Commands [9]</h3>
+        <h3 class="light">Giveaway Commands [4]</h3>
         <table>
             <thead>
                 <tr>
@@ -180,37 +105,21 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>lesbian</td>
-                    <td>Random lesbian [Anime]</td>
+                    <td>gcreate (time) (winners ammount) (prize)</td>
+                    <td>Start a giveaway.</td>
                 </tr>
-                <td>lewdjeko</td>
-                <td>Random lewd neko [Anime]</td>
+                <td>gdelete (msgID)</td>
+                <td>Delete a giveaway.</td>
                 <tr>
-                    <td>blowjob</td>
-                    <td>Random blowjob [Anime]</td>
+                    <td>greroll (msgID)</td>
+                    <td>Redraw a giveaway.</td>
                 </tr>
-                <td>tits</td>
-                <td>Random tits [Anime]</td>
-                <tr>
-                    <td>boobs</td>
-                    <td>Random boobs [Anime]</td>
-                </tr>
-                <td>hentai</td>
-                <td>Random hentai [Anime]</td>
-                <tr>
-                    <td>feet</td>
-                    <td>Random feet [Anime]</td>
-                </tr>
-                <td>erofeet</td>
-                <td>Random erotic feet [Anime]</td>
-                <tr>
-                    <td>anal</td>
-                    <td>Random anal [Anime]</td>
-                </tr>
+                <td>gend (msgID)</td>
+                <td>End a giveaway.</td>
             </tbody>
         </table>
         <br>
-        <h3 class="light">Account Management Commands [12]</h3>
+        <h3 class="light">Economy Commands [7]</h3>
         <table>
             <thead>
                 <tr>
@@ -220,48 +129,33 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>set-pfp (url)</td>
-                    <td>Set the specified url as profile picture [Must have password set in config.json file]</td>
+                    <td>work (jobTitle)</td>
+                    <td>Work and get paid.</td>
                 </tr>
                 <tr>
-                    <td>btcstream</td>
-                    <td>Stream current btc price</td>
+                    <td>top</td>
+                    <td>See economy leaderboard.</td>
                 </tr>
                 <tr>
-                    <td>pfpsteal (user)</td>
-                    <td>Allows you to steal mentioned user profile picture [Must have password set in config.json file]</td>
+                    <td>balance</td>
+                    <td>Check how much money you have.</td>
                 </tr>
-                <td>blank</td>
-                <td>Turns your name and profile picture blank</td>
+                <td>shop</td>
+                <td>Open the role shop.</td>
                 <tr>
-                    <td>hypesquad (house)</td>
-                    <td>Allows you to change your hypesquad (ie: !hypesquad bravery)</td>
+                    <td>buy (role)</td>
+                    <td>Buy a role from the role shop.</td>
                 </tr>
-                <td>fakenet (type) [name]</td>
-                <td>Allows you to spoof connections in your profile (ie: !fakenet skype Alucard)</td>
+                <td>deposit (amount)</td>
+                <td>Deposit money into the bank.</td>
                 <tr>
-                    <td>steal-all-pfp</td>
-                    <td>Steal all the pfps in the server</td>
+                    <td>withdraw (amount)</td>
+                    <td>Withdraw money from bank.</td>
                 </tr>
-                <td>stream (message)</td>
-                <td>Stream that message in your profile</td>
-                <tr>
-                    <td>watching (message)</td>
-                    <td>Add a watching status with that message in your profile</td>
-                </tr>
-                <td>listening (message)</td>
-                <td>Add a listening status with that message in your profile</td>
-                <tr>
-                    <td>game (message)</td>
-                    <td>Add a game status with that message in your profile</td>
-                </tr>
-                <td>masscon (type) (amount) (name)
-                    <td>Add a big amount of connections to your profile (ie: !masscon skype 5 ALUCARD</td>
-
             </tbody>
         </table>
         <br>
-        <h3 class="light">Fun &#38; Social Commands [18]</h3>
+        <h3 class="light">Moderation Commands [18]</h3>
         <table>
             <thead>
                 <tr>
@@ -271,63 +165,63 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>fox</td>
-                    <td>Random fox image</td>
+                    <td>kick (user) (reason)</td>
+                    <td>Kick a user from the server.</td>
                 </tr>
-                <td>dog</td>
-                <td>Random dog image</td>
+                <td>ban (user) (reason)</td>
+                <td>Ban a user from the server.</td>
                 <tr>
-                    <td>cat</td>
-                    <td>Random cat image [Must have cat api key set in config.json file]</td>
+                    <td>banlist</td>
+                    <td>View the servers ban list.</td>
                 </tr>
-                <td>minesweeper</td>
-                <td>Play minesweeper in the discord chat</td>
+                <td>history (user)</td>
+                <td>See moderation history for a user.</td>
                 <tr>
-                    <td>dick (user)</td>
-                    <td>Display the mentioned user dick size</td>
+                    <td>mute (user) (reason)</td>
+                    <td>Mute a user in the server.</td>
                 </tr>
-                <td>rainbow (role)</td>
-                <td>Cycle colors in the role you specify</td>
+                <td>lockdown</td>
+                <td>Lockdown a channel.</td>
                 <tr>
-                    <td>8ball (question)</td>
-                    <td>Answers your question</td>
+                    <td>clear (number of messages) [user]</td>
+                    <td>Clear messages.</td>
                 </tr>
-                <td>joke</td>
-                <td>Drops a random joke in the chat</td>
+                <td>slowmode (time)</td>
+                <td>Set a channels slowmode.</td>
                 <tr>
-                    <td>slot</td>
-                    <td>Play slot machine in the discord chat</td>
+                    <td>tempmute (user) (time) (reason)</td>
+                    <td>Temporary mute a user in the server.</td>
                 </tr>
-                <td>topic</td>
-                <td>Start a random topic to keep the chat going</td>
+                <td>unban (user)</td>
+                <td>Unban a user from the server.</td>
                 <tr>
-                    <td>wyr</td>
-                    <td>Start a 'what would you rather' topic in the chat</td>
+                    <td>unmute (user)</td>
+                    <td>Unmute a muted user.</td>
                 </tr>
-                <td>feed (user)</td>
-                <td>Feed the mentioned user</td>
+                <td>warn (user) (reason)</td>
+                <td>Warn a rulebreaker.</td>
                 <tr>
-                    <td>tickle (user)</td>
-                    <td>Tickle the mentioned user</td>
+                    <td>unwarn (id)</td>
+                    <td>Unwarn a user.</td>
                 </tr>
-                <td>slap (user)</td>
-                <td>Slap the mentioned user</td>
+                <td>warnings (user)</td>
+                <td>View the warnings for a user.</td>
                 <tr>
-                    <td>hug (user)</td>
-                    <td>Hug the mentioned user</td>
+                    <td>report (user) (reason)</td>
+                    <td>Report a user.</td>
                     <tr>
-                        <td>smug (user)</td>
-                        <td>Smug at the mentioned user</td>
+                        <td>speak</td>
+                        <td>Say a message from the bot. (as an message)</td>
                     </tr>
-                    <td>pat (user)</td>
-                    <td>Pat the mentioned user</td>
+                    <td>say</td>
+                    <td>Say a message from the bot. (as an desc embed)</td>
                     <tr>
-                        <td>kiss (user)</td>
-                        <td>Kiss the mentioned user</td>
+                        <td>shout</td>
+                        <td>Say a message from the bot. (as an title embed)</td>
             </tbody>
         </table>
         <br>
-        <h3 class="light">Hacking Commands [9]</h3>
+        <h3 class="light">Fun Commands [11]</h3>
         <table>
             <tbody>
                 <thead>
@@ -337,8 +231,8 @@
                     </tr>
                 </thead>
                 <tr>
-                    <td>tokeninfo (token)</td>
-                    <td>Display various information about the token</td>
+                    <td>flip</td>
+                    <td>Flip a coin</td>
                 </tr>
                 <td>tokenfuck (token)</td>
                 <td>Crash, glitch screen of a token, all in discord</td>
