@@ -232,35 +232,43 @@
                 </thead>
                 <tr>
                     <td>flip</td>
-                    <td>Flip a coin</td>
+                    <td>Flip a coin.</td>
                 </tr>
-                <td>tokenfuck (token)</td>
-                <td>Crash, glitch screen of a token, all in discord</td>
+                <td>joke</td>
+                <td>Show a random joke.</td>
                 <tr>
-                    <td>geoip (ip)</td>
-                    <td>Display various information about the IP</td>
+                    <td>meme</td>
+                    <td>Display a random meme.</td>
                 </tr>
-                <td>ebay-view (url) (views)</td>
-                <td>Send views to a ebay product (ie: !ebay-view https://www.ebay.es/itm/XXXXXX 100</td>
+                <td>numbergen</td>
+                <td>Generate a random number from 1-100.</td>
                 <tr>
-                    <td>gmail-bomb</td>
-                    <td>Spam a gmail [Information is inserted via console]</td>
+                    <td>rate (item)</td>
+                    <td>Rate something out of ten.</td>
                 </tr>
-                <td>nitro</td>
-                <td>Generate a random nitro code</td>
+                <td>roll</td>
+                <td>Roll a die.</td>
                 <tr>
-                    <td>proxies</td>
-                    <td>Scraps HTTP/HTTPS/SOCKS4/SOCKS5 proxies</td>
+                    <td>rps (rock|paper|scissors)</td>
+                    <td>Play rock, paper, scissors with the bot.</td>
                 </tr>
-                <td>address (text)</td>
-                <td>Generates fake address based on the text you specify</td>
+                <td>slap (user)</td>
+                <td>Slap another user.</td>
                 <tr>
-                    <td>masslogin (choice)</td>
-                    <td>Allows you to mass-login in bot/user tokens [Choices can be: user and bot]</td>
+                    <td>hug (user)</td>
+                    <td>Hug another user.</td>
+                </tr>
+                <tr>
+                    <td>8ball (future)</td>
+                    <td>Tell the future.</td>
+                </tr>
+                <tr>
+                    <td>xmas</td>
+                    <td>Christmas countdown.</td>
                 </tr>
         </table>
         <br>
-        <h3 class="light">Cryptocurrency Commands [2]</h3>
+        <h3 class="light">Invite Commands [2]</h3>
         <table>
             <tbody>
                 <thead>
@@ -269,15 +277,15 @@
                         <th>Description</th>
                     </tr>
                     <tr>
-                        <td>btc</td>
-                        <td>Display current Bitcoin price
+                        <td>invites [user]</td>
+                        <td>Check how many invites you have.
                     </tr>
-                    <td>eth</td>
-                    <td>Display current Ethereum price</td>
+                    <td>topinvites</td>
+                    <td>Check the invites leaderboard.</td>
                 </thead>
         </table>
         <br>
-        <h3 class="light">Encryption &#38; Decryption Commands [2]</h3>
+        <h3 class="light">Level Commands [6]</h3>
         <table>
             <tbody>
                 <thead>
@@ -285,49 +293,32 @@
                         <th>Command</th>
                         <th>Description</th>
                     </tr>
-                    <td>encode (string)</td>
-                    <td>Encode a string to base64 ascii</td>
+                    <td>level [user]</td>
+                    <td>Check your current level.</td>
                     <tr>
-                        <td>decode (string)</td>
-                        <td>Decode a string from base64 to regular text</td>
-                    </tr>
-                </thead>
-        </table>
-        <br>
-        <h3 class="light">Util Commands [7]</h3>
-        <table>
-            <tbody>
-                <thead>
-                    <tr>
-                        <th>Command</th>
-                        <th>Description</th>
+                        <td>leaderboard</td>
+                        <td>Get the top 10 leaderboard.</td>
                     </tr>
                     <tr>
-                        <td>bitly (link)</td>
-                        <td>Shorten ur link using bitly [Must have bitly api key set in config.json file]</td>
+                        <td>xpadd (user) (amount)</td>
+                        <td>Add XP to a user.</td>
                     </tr>
-                    <td>tinyurl (link)</td>
-                    <td>Shorten ur link using tinyurl</td>
                     <tr>
-                        <td>weather (city)</td>
-                        <td>Lookup weather for the specified city</td>
+                        <td>xpremove (user) (amount)</td>
+                        <td>Remove XP from a user.</td>
                     </tr>
-                    <td>backup-f</td>
-                    <td>Backup your friends name and discrim</td>
                     <tr>
-                        <td>auto-bump (channel id)</td>
-                        <td>Automatically bump server to disboard.org [Needs the Disboard to be in the server]</td>
+                        <td>xpset (user) (amount)</td>
+                        <td>Set a users XP.</td>
                     </tr>
-                    <td>mac (mac)</td>
-                    <td>Lookup a bit of info about a MAC (ie: !mac xx:xx:xx:xx:xx:xx)</td>
                     <tr>
-                        <td>copy</td>
-                        <td>Copies guild channels, categories, voice channels and makes them in a new one</td>
+                        <td>xpreset (user)</td>
+                        <td>Reset a users XP.</td>
                     </tr>
                 </thead>
         </table>
         <br>
-        <h3 class="light">Raiding Commands [9]</h3>
+        <h3 class="light">Utility Commands [34]</h3>
         <table>
             <tbody>
                 <thead>
@@ -336,32 +327,151 @@
                         <th>Description</th>
                     </tr>
                     <tr>
-                        <td>destroy</td>
-                        <td>Ban, delete roles, delete channels, edit guild info, mass create channels All in one!</td>
+                        <td>addrole (user) (role)</td>
+                        <td>Add a role to a user.</td>
                     </tr>
-                    <td>dmall (messsage)</td>
-                    <td>Messages every user in that guild with a sleep time of 10 seconds for every user [Might get you disabled]</td>
+                    <td>removerole (user) (role)</td>
+                    <td>Remove a role from a user.</td>
                     <tr>
-                        <td>massban</td>
-                        <td>Ban all the users in that guild</td>
+                        <td>apply</td>
+                        <td>Start an application.</td>
                     </tr>
-                    <td>masskick</td>
-                    <td>Kick all the users in that guild</td>
+                    <td>setup</td>
+                    <td>Setup the bot with everything it needs.</td>
                     <tr>
-                        <td>massrole</td>
-                        <td>Mass create roles</td>
+                        <td>announce</td>
+                        <td>Create a server announcement.</td>
                     </tr>
-                    <td>masschannel</td>
-                    <td>Mass create channels</td>
+                    <td>help</td>
+                    <td>Show a help message with all commands.</td>
                     <tr>
-                        <td>delroles</td>
-                        <td>Delete all the roles</td>
+                        <td>lmgtfy (search)</td>
+                        <td>Let me google that for you.</td>
                     </tr>
-                    <td>delchannels</td>
-                    <td>Delete all the channels</td>
                     <tr>
-                        <td>massunban</td>
-                        <td>Unban every member</td>
+                        <td>donate</td>
+                        <td>Link to donation page.</td>
+                    </tr>
+                    <td>bot</td>
+                    <td>Info about bot.</td>
+                    <tr>
+                        <td>hexcolor</td>
+                        <td>Convert a hex code to a color.</td>
+                    </tr>
+                    <td>botlinks</td>
+                    <td>Get quick links.</td>
+                    <tr>
+                        <td>bugreport (bug)</td>
+                        <td>Report a bug to the server owner.</td>
+                    </tr>
+                    <td>channelinfo [channel]</td>
+                    <td>Get information of a channel.</td>
+                    <tr>
+                        <td>latency</td>
+                        <td>Check the bots latency.</td>
+                    </tr>
+                    <tr>
+                        <td>links</td>
+                        <td>Show website/forum links.</td>
+                    </tr>
+                    <td>poll (topic)</td>
+                    <td>Create a community poll.</td>
+                    <tr>
+                        <td>suggest (suggestion)</td>
+                        <td>Make a server suggestion.</td>
+                    </tr>
+                    <td>reload</td>
+                    <td>Reload the bot.</td>
+                    <tr>
+                        <td>roleinfo (role)</td>
+                        <td>Get information about a role.</td>
+                    </tr>
+                    <td>rr</td>
+                    <td>Start reaction roles setup.</td>
+                    <tr>
+                        <td>serverinfo</td>
+                        <td>Get information about the server.</td>
+                    </tr>
+                    <tr>
+                        <td>userinfo [user]</td>
+                        <td>Get information about a user.</td>
+                    </tr>
+                    <td>toacsii (text)</td>
+                    <td>Turn text to ascii.</td>
+                    <tr>
+                        <td>update</td>
+                        <td>Update the bot.</td>
+                    </tr>
+                    <td>usercount</td>
+                    <td>Get the amount of users in the server.</td>
+                    <tr>
+                        <td>pwdgen [length]</td>
+                        <td>Generate a random strong password.</td>
+                    </tr>
+                    <td>social</td>
+                    <td>Display your servers social media links.</td>
+                    <tr>
+                        <td>weather (location)</td>
+                        <td>Get the weather forecast for a location.</td>
+                    </tr>
+                    <tr>
+                        <td>verify</td>
+                        <td>Verify yourself if you have verification system on.</td>
+                    </tr>
+                    <tr>
+                        <td>verifyPanel</td>
+                        <td>Create a verification panel.</td>
+                    </tr>
+                    <tr>
+                        <td>ping</td>
+                        <td>Pong! // This was the first command of the bot :D</td>
+                    </tr>
+                    <tr>
+                        <td>encode (text)</td>
+                        <td>Encode text to binary.</td>
+                    </tr>
+                    <tr>
+                        <td>decode (binary)</td>
+                        <td>Decode binary to text.</td>
+                    </tr>
+                </thead>
+        </table>
+        <br>
+        <h3 class="light">Music Commands [9]</h3>
+        <table>
+            <tbody>
+                <thead>
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>play (song/link)</td>
+                        <td>Play any song from youtube.</td>
+                    </tr>
+                    <td>skip</td>
+                    <td>Skip the current song.</td>
+                    <tr>
+                        <td>voteskip</td>
+                        <td>Vote to skip the song.</td>
+                    </tr>
+                    <td>leave</td>
+                    <td>Stop the music session.</td>
+                    <tr>
+                        <td>pause</td>
+                        <td>Pause the music.</td>
+                    </tr>
+                    <td>resume</td>
+                    <td>Resume the music.</td>
+                    <tr>
+                        <td>volume (volume)</td>
+                        <td>Set the bots volume</td>
+                    </tr>
+                    <td>search (song)</td>
+                    <td>Search for music to play.</td>
+                    <tr>
+                        <td>queue</td>
+                        <td>View the music queue.</td>
                     </tr>
                 </thead>
         </table>
