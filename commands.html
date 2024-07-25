@@ -39,462 +39,61 @@
     <script>
         AOS.init();
     </script>
+
+    <!-- Commands Table -->
+    <main>
+        <div class="container">
+            <div id="commands-content"></div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('config/commands.json')
+                .then(response => response.json())
+                .then(data => {
+                    const commandsContent = document.getElementById('commands-content');
+
+                    const createTable = (title, commands) => {
+                        let tableHTML = `
+                            <h3 class="light">${title}</h3>
+                            <table class="table table-dark table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Command</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>`;
+
+                        commands.forEach(command => {
+                            tableHTML += `
+                                <tr>
+                                    <td>${command.command}</td>
+                                    <td>${command.description}</td>
+                                </tr>`;
+                        });
+
+                        tableHTML += `</tbody></table><br>`;
+                        return tableHTML;
+                    };
+
+                    let contentHTML = '';
+                    contentHTML += createTable('Ticket Commands [13]', data.ticketCommands);
+                    contentHTML += createTable('Giveaway Commands [4]', data.giveawayCommands);
+                    contentHTML += createTable('Economy Commands [7]', data.economyCommands);
+                    contentHTML += createTable('Moderation Commands [18]', data.moderationCommands);
+                    contentHTML += createTable('Fun Commands [11]', data.funCommands);
+                    contentHTML += createTable('Invite Commands [2]', data.inviteCommands);
+                    contentHTML += createTable('Level Commands [6]', data.levelCommands);
+                    contentHTML += createTable('Utility Commands [34]', data.utilityCommands);
+                    contentHTML += createTable('Music Commands [9]', data.musicCommands);
+
+                    commandsContent.innerHTML = contentHTML;
+                })
+                .catch(error => console.error('Error loading commands:', error));
+        });
+    </script>
 </body>
-
-<!-- Commands Table -->
-
-<main>
-    <div class="container">
-    <div class="column">
-        <h3 class="light">Ticket Commands [13]</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Command</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>new (reason)</td>
-                    <td>Create a new support ticket channel.</td>
-                </tr>
-                <td>close</td>
-                <td>Close a support ticket channel.</td>
-                <tr>
-                    <td>delete</td>
-                    <td>Deletes a ticket channel.</td>
-                </tr>
-                <td>forcedelete</td>
-                <td>Fast way to delete a ticket channel.</td>
-                <tr>
-                    <td>lower</td>
-                    <td>Lower a support ticket to the whole staff team.</td>
-                </tr>
-                <td>raise</td>
-                <td>Raise a support ticket to select roles only.</td>
-                <tr>
-                    <td>remove (user)</td>
-                    <td>Remove a user from a support ticket.</td>
-                </tr>
-                <td>add (user)</td>
-                <td>Add a user to a support ticket.</td>
-                <tr>
-                    <td>notice</td>
-                    <td>Display a please reply notice in a support ticket.</td>
-                </tr>
-                <td>ticketpanel</td>
-                <td>Create a panel for tickets. People can create a support ticket by reacting with 🎟️.</td>
-                <tr>
-                    <td>reopen</td>
-                    <td>Reopen a closed ticket.</td>
-                </tr>
-                <td>transcript</td>
-                <td>Get the transcript sent to the channel.</td>
-                <tr>
-                    <td>voiceticket</td>
-                    <td>Open a voice ticket.</td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <h3 class="light">Giveaway Commands [4]</h3>
-        <div class="container">
-        <div class="column">
-        <table>
-            <thead>
-                <tr>
-                    <th>Command</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <td>gcreate (time) (winners ammount) (prize)</td>
-                <td>Start a giveaway.</td>
-                </tr>
-                <td>gdelete (msgID)</td>
-                <td>Delete a giveaway.</td>
-                <tr>
-                <td>greroll (msgID)</td>
-                <td>Redraw a giveaway.</td>
-                </tr>
-                <td>gend (msgID)</td>
-                <td>End a giveaway.</td>
-            </tbody>
-        </table>
-        <br>
-        <h3 class="light">Economy Commands [7]</h3>
-        <div class="container">
-        <div class="column">
-        <table>
-            <thead>
-                <tr>
-                    <th>Command</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>work (jobTitle)</td>
-                    <td>Work and get paid.</td>
-                </tr>
-                <tr>
-                    <td>top</td>
-                    <td>See economy leaderboard.</td>
-                </tr>
-                <tr>
-                    <td>balance</td>
-                    <td>Check how much money you have.</td>
-                </tr>
-                <td>shop</td>
-                <td>Open the role shop.</td>
-                <tr>
-                    <td>buy (role)</td>
-                    <td>Buy a role from the role shop.</td>
-                </tr>
-                <td>deposit (amount)</td>
-                <td>Deposit money into the bank.</td>
-                <tr>
-                    <td>withdraw (amount)</td>
-                    <td>Withdraw money from bank.</td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <h3 class="light">Moderation Commands [18]</h3>
-        <div class="container">
-        <div class="column">
-        <table>
-            <thead>
-                <tr>
-                    <th>Command</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>kick (user) (reason)</td>
-                    <td>Kick a user from the server.</td>
-                </tr>
-                <td>ban (user) (reason)</td>
-                <td>Ban a user from the server.</td>
-                <tr>
-                    <td>banlist</td>
-                    <td>View the servers ban list.</td>
-                </tr>
-                <td>history (user)</td>
-                <td>See moderation history for a user.</td>
-                <tr>
-                    <td>mute (user) (reason)</td>
-                    <td>Mute a user in the server.</td>
-                </tr>
-                <td>lockdown</td>
-                <td>Lockdown a channel.</td>
-                <tr>
-                    <td>clear (number of messages) [user]</td>
-                    <td>Clear messages.</td>
-                </tr>
-                <td>slowmode (time)</td>
-                <td>Set a channels slowmode.</td>
-                <tr>
-                    <td>tempmute (user) (time) (reason)</td>
-                    <td>Temporary mute a user in the server.</td>
-                </tr>
-                <td>unban (user)</td>
-                <td>Unban a user from the server.</td>
-                <tr>
-                    <td>unmute (user)</td>
-                    <td>Unmute a muted user.</td>
-                </tr>
-                <td>warn (user) (reason)</td>
-                <td>Warn a rulebreaker.</td>
-                <tr>
-                    <td>unwarn (id)</td>
-                    <td>Unwarn a user.</td>
-                </tr>
-                <td>warnings (user)</td>
-                <td>View the warnings for a user.</td>
-                <tr>
-                    <td>report (user) (reason)</td>
-                    <td>Report a user.</td>
-                    <tr>
-                        <td>speak</td>
-                        <td>Say a message from the bot. (as an message)</td>
-                    </tr>
-                    <td>say</td>
-                    <td>Say a message from the bot. (as an desc embed)</td>
-                    <tr>
-                        <td>shout</td>
-                        <td>Say a message from the bot. (as an title embed)</td>
-            </tbody>
-        </table>
-        <br>
-        <h3 class="light">Fun Commands [11]</h3>
-        <div class="container">
-        <div class="column">
-        <table>
-            <tbody>
-                <thead>
-                    <tr>
-                        <th>Command</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td>flip</td>
-                    <td>Flip a coin.</td>
-                </tr>
-                <td>joke</td>
-                <td>Show a random joke.</td>
-                <tr>
-                    <td>meme</td>
-                    <td>Display a random meme.</td>
-                </tr>
-                <td>numbergen</td>
-                <td>Generate a random number from 1-100.</td>
-                <tr>
-                    <td>rate (item)</td>
-                    <td>Rate something out of ten.</td>
-                </tr>
-                <td>roll</td>
-                <td>Roll a die.</td>
-                <tr>
-                    <td>rps (rock|paper|scissors)</td>
-                    <td>Play rock, paper, scissors with the bot.</td>
-                </tr>
-                <td>slap (user)</td>
-                <td>Slap another user.</td>
-                <tr>
-                    <td>hug (user)</td>
-                    <td>Hug another user.</td>
-                </tr>
-                <tr>
-                    <td>8ball (future)</td>
-                    <td>Tell the future.</td>
-                </tr>
-                <tr>
-                    <td>xmas</td>
-                    <td>Christmas countdown.</td>
-                </tr>
-        </table>
-        <br>
-        <h3 class="light">Invite Commands [2]</h3>
-        <div class="container">
-        <div class="column">
-        <table>
-            <tbody>
-                <thead>
-                    <tr>
-                        <th>Command</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>invites [user]</td>
-                        <td>Check how many invites you have.
-                    </tr>
-                    <td>topinvites</td>
-                    <td>Check the invites leaderboard.</td>
-                </thead>
-        </table>
-        <br>
-        <h3 class="light">Level Commands [6]</h3>
-        <div class="container">
-        <div class="column">
-        <table>
-            <tbody>
-                <thead>
-                    <tr>
-                        <th>Command</th>
-                        <th>Description</th>
-                    </tr>
-                    <td>level [user]</td>
-                    <td>Check your current level.</td>
-                    <tr>
-                        <td>leaderboard</td>
-                        <td>Get the top 10 leaderboard.</td>
-                    </tr>
-                    <tr>
-                        <td>xpadd (user) (amount)</td>
-                        <td>Add XP to a user.</td>
-                    </tr>
-                    <tr>
-                        <td>xpremove (user) (amount)</td>
-                        <td>Remove XP from a user.</td>
-                    </tr>
-                    <tr>
-                        <td>xpset (user) (amount)</td>
-                        <td>Set a users XP.</td>
-                    </tr>
-                    <tr>
-                        <td>xpreset (user)</td>
-                        <td>Reset a users XP.</td>
-                    </tr>
-                </thead>
-        </table>
-        <br>
-        <h3 class="light">Utility Commands [34]</h3>
-        <div class="container">
-        <div class="column">
-        <table>
-            <tbody>
-                <thead>
-                    <tr>
-                        <th>Command</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>addrole (user) (role)</td>
-                        <td>Add a role to a user.</td>
-                    </tr>
-                    <td>removerole (user) (role)</td>
-                    <td>Remove a role from a user.</td>
-                    <tr>
-                        <td>apply</td>
-                        <td>Start an application.</td>
-                    </tr>
-                    <td>setup</td>
-                    <td>Setup the bot with everything it needs.</td>
-                    <tr>
-                        <td>announce</td>
-                        <td>Create a server announcement.</td>
-                    </tr>
-                    <td>help</td>
-                    <td>Show a help message with all commands.</td>
-                    <tr>
-                        <td>lmgtfy (search)</td>
-                        <td>Let me google that for you.</td>
-                    </tr>
-                    <tr>
-                        <td>donate</td>
-                        <td>Link to donation page.</td>
-                    </tr>
-                    <td>bot</td>
-                    <td>Info about bot.</td>
-                    <tr>
-                        <td>hexcolor</td>
-                        <td>Convert a hex code to a color.</td>
-                    </tr>
-                    <td>botlinks</td>
-                    <td>Get quick links.</td>
-                    <tr>
-                        <td>bugreport (bug)</td>
-                        <td>Report a bug to the server owner.</td>
-                    </tr>
-                    <td>channelinfo [channel]</td>
-                    <td>Get information of a channel.</td>
-                    <tr>
-                        <td>latency</td>
-                        <td>Check the bots latency.</td>
-                    </tr>
-                    <tr>
-                        <td>links</td>
-                        <td>Show website/forum links.</td>
-                    </tr>
-                    <td>poll (topic)</td>
-                    <td>Create a community poll.</td>
-                    <tr>
-                        <td>suggest (suggestion)</td>
-                        <td>Make a server suggestion.</td>
-                    </tr>
-                    <td>reload</td>
-                    <td>Reload the bot.</td>
-                    <tr>
-                        <td>roleinfo (role)</td>
-                        <td>Get information about a role.</td>
-                    </tr>
-                    <td>rr</td>
-                    <td>Start reaction roles setup.</td>
-                    <tr>
-                        <td>serverinfo</td>
-                        <td>Get information about the server.</td>
-                    </tr>
-                    <tr>
-                        <td>userinfo [user]</td>
-                        <td>Get information about a user.</td>
-                    </tr>
-                    <td>toacsii (text)</td>
-                    <td>Turn text to ascii.</td>
-                    <tr>
-                        <td>update</td>
-                        <td>Update the bot.</td>
-                    </tr>
-                    <td>usercount</td>
-                    <td>Get the amount of users in the server.</td>
-                    <tr>
-                        <td>pwdgen [length]</td>
-                        <td>Generate a random strong password.</td>
-                    </tr>
-                    <td>social</td>
-                    <td>Display your servers social media links.</td>
-                    <tr>
-                        <td>weather (location)</td>
-                        <td>Get the weather forecast for a location.</td>
-                    </tr>
-                    <tr>
-                        <td>verify</td>
-                        <td>Verify yourself if you have verification system on.</td>
-                    </tr>
-                    <tr>
-                        <td>verifyPanel</td>
-                        <td>Create a verification panel.</td>
-                    </tr>
-                    <tr>
-                        <td>ping</td>
-                        <td>Pong! // This was the first command of the bot :D</td>
-                    </tr>
-                    <tr>
-                        <td>encode (text)</td>
-                        <td>Encode text to binary.</td>
-                    </tr>
-                    <tr>
-                        <td>decode (binary)</td>
-                        <td>Decode binary to text.</td>
-                    </tr>
-                </thead>
-        </table>
-        <br>
-        <h3 class="light">Music Commands [9]</h3>
-        <div class="container">
-        <div class="column">
-        <table>
-            <tbody>
-                <thead>
-                    <tr>
-                        <th>Command</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>play (song/link)</td>
-                        <td>Play any song from youtube.</td>
-                    </tr>
-                    <td>skip</td>
-                    <td>Skip the current song.</td>
-                    <tr>
-                        <td>voteskip</td>
-                        <td>Vote to skip the song.</td>
-                    </tr>
-                    <td>leave</td>
-                    <td>Stop the music session.</td>
-                    <tr>
-                        <td>pause</td>
-                        <td>Pause the music.</td>
-                    </tr>
-                    <td>resume</td>
-                    <td>Resume the music.</td>
-                    <tr>
-                        <td>volume (volume)</td>
-                        <td>Set the bots volume</td>
-                    </tr>
-                    <td>search (song)</td>
-                    <td>Search for music to play.</td>
-                    <tr>
-                        <td>queue</td>
-                        <td>View the music queue.</td>
-                    </tr>
-                </thead>
-        </table>
-    </div>
-</main>
 
 </html>
